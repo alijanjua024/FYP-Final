@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CricInteligence Application Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        .header {
+            padding: 20px;
+            background-color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a class="navbar-brand" href="#">crickintell.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin">Home <span class="sr-only">(current)</span></a>
+
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="/ground">New Ground</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/odi-match">New ODI Match</a></li>
+                <li class="nav-item active"> <a class="nav-link" href="/odi-player-inning">New ODI Player Inning</a>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="/logout">Logout</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 100px;">
+
+
+        <form action="" method="POST">
+            <div class="row">
+                <div class="col-md-4">
+                    <legend>New Player Inning</legend>
+                    <div class="form-group">
+                        <label for="name">Team</label>
+                        <input type="text" name="team" id="team" class="form-control" placeholder="Enter Team Name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="opponent">Opponent</label>
+                        <input type="text" name="opponent" id="opponent" class="form-control"
+                            placeholder="Enter Opponent Team Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ground">Ground</label>
+                        <input type="text" name="ground" id="ground" class="form-control"
+                            placeholder="Enter Ground Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Inning date</label>
+                        <input type="date" name="inningDate" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notOut">Not Out</label>
+                        <select name="notOut" id="notOut" class="form-control">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="runs">Runs Scored</label>
+                        <input type="text" name="runs" id="runs" class="form-control" placeholder="Runs Scored"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label>Balls Faced</label>
+                        <input type="text" name="ballsFaced" class="form-control" placeholder="Balls Faced" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Strike Rate</label>
+                        <input type="text" name="battingStrikeRate" class="form-control"
+                            placeholder="Batting Strike Rate" required>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-top: 50px;">
+                   
+                    <div class="form-group">
+                        <label>Boundry Fours </label>
+                        <input type="text" name="fours" class="form-control" placeholder="Boundry Fours" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Boundry Sixes </label>
+                        <input type="text" name="sixes" class="form-control" placeholder="Boundry Sixes" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Inning Bowled</label>
+                        <select name="bowled" class="form-control">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Bowling Economy Rate </label>
+                        <input type="text" name="bowlingEconomy" class="form-control" placeholder="Bowling Economy">
+                    </div>
+                    <div class="form-group">
+                        <label>Bowling Maidans </label>
+                        <input type="text" name="maidans" class="form-control" placeholder="Bowling Maidans">
+                    </div>
+                    <div class="form-group">
+                        <label>Bowling Overs </label>
+                        <input type="text" name="overs" class="form-control" placeholder="Bowling Overs">
+                    </div>
+                    <div class="form-group">
+                        <label>Bowling Runs Conceded </label>
+                        <input type="text" name="runs" class="form-control" placeholder="Bowling Runs Conceded">
+                    </div>
+                    <input type="submit" value="Save Match" class="btn btn-success">
+
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-md-12">
+                <legend>ODI Player Innings</legend>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Sr#</th>
+                        <th>Team</th>
+                        <th>Opponent</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td colspan="5" style="text-align: center;">Data not shown due to limit</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</html>

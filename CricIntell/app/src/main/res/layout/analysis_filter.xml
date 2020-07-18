@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Opponent Team"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/analysisFilterOpponents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ground"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/analysisFilterGrounds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Year"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/analysisFilterYears"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/analysisFilterLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/location"  />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="applyFilters"
+        android:text="APPLY FILTERS"
+        android:textColor="@color/white" />
+</LinearLayout>
