@@ -50,16 +50,19 @@ app.get('/odi-player-inning', (request, response) => {
 });
 
 app.post('/ground', (request, response) => {
-    response.send('PERMISSION_DENIED: Missing or insufficient permissions');
+    response.redirect('/ground')
+   // response.send('PERMISSION_DENIED: Missing or insufficient permissions');
 });
 
 app.post('/odi-match', (request, response) => {
-    response.send('PERMISSION_DENIED: Missing or insufficient permissions');
+    //response.send('PERMISSION_DENIED: Missing or insufficient permissions');
+    response.redirect('/odi-match')
 
 });
 
 app.post('/odi-player-inning', (request, response) => {
-    response.send('PERMISSION_DENIED: Missing or insufficient permissions');
+    //response.send('PERMISSION_DENIED: Missing or insufficient permissions');
+    response.redirect('/odi-player-inning')
 
 });
 app.get('/logout', (request, response) => {

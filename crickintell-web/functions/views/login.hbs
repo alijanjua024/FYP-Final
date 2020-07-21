@@ -4,30 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CricInteligence Application</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CricInteligence Application</title>
     <style>
-        .header {
-            padding: 20px;
-            background-color: azure;
+        body {
+            background-image: url("https://firebasestorage.googleapis.com/v0/b/crickintelligence.appspot.com/o/bg.jpeg?alt=media&token=52a23829-c70c-4eca-bc29-123585cd3b1b");
         }
     </style>
 </head>
-<style>
-body {
-  background-image: url('https://resources.pulse.icc-cricket.com/photo-resources/2020/04/11/8060b15a-9167-4c32-979c-d0c2bc568fc8/Runner-up-Kieran-Hanlon.jpg?width=2000&height=1125');
-}
-</style>
 
-<body>
-    <style>
-body {
-  background-image: url('https://resources.pulse.icc-cricket.com/photo-resources/2020/04/11/8060b15a-9167-4c32-979c-d0c2bc568fc8/Runner-up-Kieran-Hanlon.jpg?width=2000&height=1125');
-}
-</style>
+<body background="../assets/bg.jpeg">
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <a class="navbar-brand" href="#">crickintell.</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -46,17 +34,24 @@ body {
 
         </div>
     </nav>
-    <div class="jumbotron">
-        <h1 class="display-4">Crick Intell App</h1>
-        <p class="lead">The ultimate intellegent app to provide analysis on teams, players and what not!!</p>
-        <hr class="my-4">
-        <p>A project by</p>
-        <p class="lead">
-           <ul>
-               <li>Ali Janjua - Roll Number</li>
-               <li>Hassan Ali - Roll Number</li>
-           </ul>
-        </p>
+    <div class="jumbotron" style="background-color: transparent;">
+        <h4>Admin Login</h1>
+            <p class="lead">Log in to start your session</p>
+            <hr class="my-4">
+            <div class="col-4">
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" id="password"
+                            placeholder="Password">
+                    </div>
+                    <input type="submit" value="Login" class="btn btn-success">
+                </form>
+            </div>
     </div>
 
 </body>

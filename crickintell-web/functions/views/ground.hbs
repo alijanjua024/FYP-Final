@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,8 +14,14 @@
             padding: 20px;
             background-color: azure;
         }
+   
+        body {
+            background-image: url("https://firebasestorage.googleapis.com/v0/b/crickintelligence.appspot.com/o/bg.jpeg?alt=media&token=52a23829-c70c-4eca-bc29-123585cd3b1b");
+        }
     </style>
+
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <a class="navbar-brand" href="#">crickintell.</a>
@@ -27,25 +32,54 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="/admin">Home <span class="sr-only">(current)</span></a>
+
                 </li>
-                <li class="nav-item"> <a class="nav-link" href="/ground">New Ground</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/odi-match">New ODIMatch</a></li>
+                <li class="nav-item active"> <a class="nav-link" href="/ground">New Ground</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/odi-match">New ODI Match</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/odi-player-inning">New ODI Player Inning</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/logout">Logout</a></li>
             </ul>
 
         </div>
     </nav>
-    <div class="jumbotron">
-        <h1 class="display-4">Crick Intell App</h1>
-        <p class="lead">The ultimate intellegent app to provide analysis on teams, players and what not!!</p>
-        <hr class="my-4">
-        
-    </div>
-    <div class="container">
-      
+
+    <div class="container" style="padding-top: 100px;">
+        <div class="row">
+
+            <div class="col-md-4">
+                <form action="" method="POST">
+                    <legend>New Ground Record</legend>
+                    <div class="form-group">
+                        <label for="name">Ground Name</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter Ground Name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Country</label>
+                        <input type="text" name="country" id="country" placeholder="Enter Country" class="form-control"
+                            required>
+                    </div>
+                    <input type="submit" value="Save Ground" class="btn btn-success">
+                </form>
+            </div>
+            <div class="col-md-8">
+                <legend>All Grounds</legend>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Sr#</th>
+                        <th>Name</th>
+                        <th>Ground</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: center;">Data not shown due to limit</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
     </div>
 
 </body>
