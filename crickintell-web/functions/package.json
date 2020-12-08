@@ -15,7 +15,7 @@
     "consolidate": "^0.15.1",
     "csv-parser": "^2.3.2",
     "express": "^4.17.1",
-    "fast-csv": "^3.4.0",
+    "fast-csv": "^4.3.6",
     "firebase": "^7.15.1",
     "firebase-admin": "^8.12.1",
     "firebase-functions": "^3.3.0",
