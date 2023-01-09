@@ -17,8 +17,8 @@
     "express": "^4.17.1",
     "fast-csv": "^3.4.0",
     "firebase": "^7.15.1",
-    "firebase-admin": "^8.12.1",
-    "firebase-functions": "^3.3.0",
+    "firebase-admin": "^11.4.1",
+    "firebase-functions": "^3.24.1",
     "handlebars": "^4.5.3"
   },
   "devDependencies": {
